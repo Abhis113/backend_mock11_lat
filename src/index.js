@@ -9,7 +9,9 @@ app.use(cookie_parser())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 require("dotenv").config();
-
+app.get('/', (req, res) => {
+    res.send('welcome');
+  });
 
 const userRoute = require("./routes/index");
 
